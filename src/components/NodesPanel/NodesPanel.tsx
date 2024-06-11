@@ -15,8 +15,10 @@ type NodeTypesListProps = {
   onNewNode: (type: string) => void;
 };
 
+//component to list all node types
 const NodeTypesList = memo(
   ({ onNewNode }: NodeTypesListProps) => {
+    //fn to handle drag start of a node from panel to flow
     const onDragStart = (
       event: DragEvent<HTMLDivElement>,
       nodeType: string
@@ -24,6 +26,7 @@ const NodeTypesList = memo(
       event.dataTransfer!.setData("application/reactflow", nodeType);
       event.dataTransfer!.effectAllowed = "move";
     };
+
     return (
       <div className={styles.panel}>
         <p className={styles.heading}>All Nodes</p>
@@ -47,6 +50,7 @@ const NodeTypesList = memo(
 const NodesPanel = memo(() => {
   const { addNode } = useStore(useShallow(selector));
 
+  //fn to handle addition of new node by click
   const handleNewNode = useCallback(
     (type: string) => {
       addNode({

@@ -21,10 +21,12 @@ export default function MessageNode({ data, id, type }: MessageNode) {
   );
 
   const handleClick = () => {
+    //set selected node
     setSelectedNode({ id, data, type } as Node);
   };
 
   const checkConnection = (connection: Connection) => {
+    //check connection to see if valid
     const connections = getNumberOfConnectedEdges(connection.source!);
 
     if (connections > 0) {

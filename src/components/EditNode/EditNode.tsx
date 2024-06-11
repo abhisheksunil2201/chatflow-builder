@@ -14,6 +14,7 @@ const EditNode = () => {
   const { selectedNode, setSelectedNode, updateNode } = useStore(
     useShallow(selector)
   );
+  //set data of the cuurent node to be edited
   const [data, setData] = useState({
     id: selectedNode?.id,
     data: selectedNode?.data,
@@ -30,6 +31,7 @@ const EditNode = () => {
   if (!selectedNode) return;
 
   const handleUpdate = () => {
+    //update fn to make changes
     updateNode(selectedNode.id, {
       data: data.data,
     });

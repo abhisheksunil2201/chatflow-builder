@@ -104,11 +104,13 @@ const useStore = create<RFState>((set, get) => ({
     });
   },
   getNumberOfConnectedEdges: (id: string) => {
+    //get the count of incoming edges
     const edges = get().edges;
     const incomingEdges = edges.filter((edge) => edge.source === id);
     return incomingEdges.length;
   },
   checkEdgeConstraints: () => {
+    //checking if there are any invalid nodes by the count of incoming and outgoing nodes
     const nodes = get().nodes;
     const edges = get().edges;
     let invalidNodes = 0;
@@ -121,11 +123,13 @@ const useStore = create<RFState>((set, get) => ({
     return invalidNodes === 0;
   },
   saveToLocalStorage: () => {
+    //saving to local storage
     const { nodes, edges } = get();
     localStorage.setItem("nodes", JSON.stringify(nodes));
     localStorage.setItem("edges", JSON.stringify(edges));
   },
   loadFromLocalStorage: () => {
+    //loading from local storage
     const storedNodes = localStorage.getItem("nodes");
     const storedEdges = localStorage.getItem("edges");
     console.log(storedEdges, storedNodes);

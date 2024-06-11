@@ -7,6 +7,8 @@ import EditNode from "../EditNode/EditNode";
 const selector = (state: RFState) => ({
   selectedNode: state.selectedNode,
 });
+
+//component t display EditNode panel if a node is seletced else show ALl Nodes panel
 const SidePanel = () => {
   const { selectedNode } = useStore(useShallow(selector));
   return (

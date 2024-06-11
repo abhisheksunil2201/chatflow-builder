@@ -19,6 +19,7 @@ const selector = (state: RFState) => ({
   addNode: state.addNode,
 });
 
+//reactflow component
 export default function Flow() {
   const { nodes, edges, onNodesChange, onEdgesChange, onConnect, addNode } =
     useStore(useShallow(selector));
@@ -27,6 +28,7 @@ export default function Flow() {
 
   const nodeTypes = useMemo(() => ({ message: MessageNode }), []);
 
+  //fn to handle when node is dragged to the flow
   const onDragOver = useCallback((event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";

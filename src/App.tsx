@@ -15,6 +15,7 @@ function App() {
   const { loadFromLocalStorage } = useStore(useShallow(selector));
 
   useEffect(() => {
+    //load from local storage on init
     loadFromLocalStorage();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

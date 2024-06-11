@@ -14,12 +14,14 @@ const Header = () => {
     useShallow(selector)
   );
   const handleCheck = () => {
+    //check if the nodes are all valid
     const checkSatisfies = checkEdgeConstraints();
     if (!checkSatisfies) {
       toast.error("All nodes need to be connected", {
         toastId: "connection-error-toast",
       });
     } else {
+      //save the flow
       saveToLocalStorage();
       toast.success("Flow saved to localstorage", {
         toastId: "save-toast-success",
