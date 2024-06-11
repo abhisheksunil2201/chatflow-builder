@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #edf0f2;
+  border-radius: 0.5rem;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgb(35, 35, 43);
+  transition: background-color 0.5s ease;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background-color: rgb(61, 61, 77);
+}

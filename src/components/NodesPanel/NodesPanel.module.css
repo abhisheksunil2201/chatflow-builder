@@ -1,0 +1,31 @@
+.panel {
+  padding: 0 1rem 1rem 1rem;
+  border-radius: 4px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px dashed rgb(61, 61, 77); */
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: gray;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.nodetype {
+  color: gray;
+  transition: color 0.5s ease;
+  border: 1px dashed rgb(61, 61, 77);
+  border-radius: 4px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.nodetype:hover {
+  color: red;
+}

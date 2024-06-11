@@ -1,0 +1,19 @@
+.editNode {
+  padding: 2rem;
+  height: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.data {
+  width: 100%;
+  height: 20rem;
+  resize: none;
+  border: 1px dotted gray;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+}
